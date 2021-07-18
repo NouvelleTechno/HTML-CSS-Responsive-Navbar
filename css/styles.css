@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+}
+
+.navbar{
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 70px;
+}
+
+.icon{
+    fill: white;
+    cursor: pointer;
+}
+
+.navbar input, .nav-menu, .dropdown{
+    display: none;
+}
+
+[id^=btn]:checked + ul{
+    display: block;
+}
+
+.nav-menu{
+    background-color: black;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+}
+
+.nav-item a, .drop-item a, .show{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 1.2rem;
+}
+
+.nav-menu a:hover, .show:hover{
+    color: red;
+}
+
+@media screen and (min-width: 768px){
+    .icon{
+        display: none;
+    }
+    .nav-menu{
+        display: initial;
+        position: static;
+    }
+    .nav-item{
+        display: inline-block;
+        margin-left: 20px;
+        position: relative;
+    }
+    .dropdown{
+        position: absolute;
+        background-color: black;
+        top: 70px;
+        right: 0;
+        padding-right: 40px;
+        width: max-content;
+    }
+
+}
